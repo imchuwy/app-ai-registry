@@ -65,9 +65,11 @@ Once loaded, interactions can continue offline. A fresh offline load is not supp
 
 ## Static hosting
 
+The public demo is published at [imchuwy.github.io/app-ai-registry](https://imchuwy.github.io/app-ai-registry/). GitHub Pages uses the GitHub Actions publishing source. The workflow checks every branch and pull request; only a successful run on `main` uploads `dist/` and deploys it. Future merges to `main` automatically update the demo. The workflow can also be run manually on `main` to redeploy.
+
 Build with `npm run build` and upload **only `dist/`** to a static host. Relative assets and hash routes support a repository subpath without server rewrites. The supplied design reference folder is excluded from Git and never part of the deployment output.
 
-Public hosting and repository publication are separate release decisions. No deployment credentials, backend environment variables or production database are needed.
+Deployment uses GitHub's short-lived workflow token. No stored deployment credentials, backend environment variables or production database are needed.
 
 ## Design and licensing
 
