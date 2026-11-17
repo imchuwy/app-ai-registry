@@ -1,6 +1,6 @@
 # Publication handoff
 
-The owner supplied [the GitHub repository](https://github.com/imchuwy/app-ai-registry), configured as `origin`. Read and write access are verified. The owner authorised publishing the complete application through a pull request and merging after checks. Hosting is a separate, unconfigured release step.
+The owner supplied [the GitHub repository](https://github.com/imchuwy/app-ai-registry), configured as `origin`. Read and write access are verified. The owner authorised publishing and merging through checked pull requests, then enabling public GitHub Pages hosting. Successful builds on `main` publish only the static `dist/` output.
 
 The implementation branch is `codex/portfolio-implementation`, based on the existing personal repository's main branch. Commits use the same personal GitHub no-reply identity as its initial commit. No corporate repository history or settings are included.
 
