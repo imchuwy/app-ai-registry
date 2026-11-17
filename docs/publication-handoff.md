@@ -7,7 +7,7 @@ The implementation branch is `codex/portfolio-implementation`, based on the exis
 ## Owner decisions
 
 1. Project source-code licence. Publication does not itself grant an open-source licence.
-2. Static hosting destination and whether to use a custom domain.
+2. Optional custom domain; the approved hosting destination is GitHub Pages at `https://imchuwy.github.io/app-ai-registry/`.
 3. Visual feedback on the OC AI treatment and the simplified small favicon; the supplied raster logo family still lacks a canonical vector master.
 
 ## Release steps
