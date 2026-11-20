@@ -1,6 +1,7 @@
 # OC AI · AI Registry
 
 A working, browser-local AI governance playground. Explore ten fictional use cases, understand their risk, try an assessment and follow a review decision.
+Please find a public demo here published here imchuwy.github.io/app-ai-registry.
 
 Built with React, TypeScript and the OC AI Trail Sunset design system. All example records, dates, comments and activity are synthetic. There is no shared database, login, model API or telemetry.
 
