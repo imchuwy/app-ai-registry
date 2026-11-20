@@ -17,7 +17,7 @@ import { Registry } from './Registry';
 import { CaseEditor } from './CaseEditor';
 import { CaseDetail } from './CaseDetail';
 import { Methodology } from './Methodology';
-import { Confirm, download } from './ui';
+import { Confirm, InfoButton, download } from './ui';
 declare global {
   interface Window {
     OCAITheme: { get: () => string; set: (value: string) => void };
@@ -167,9 +167,7 @@ export function App() {
             alt=""
           />
         </a>
-        <div className="workspace-label">
-          AI Registry<span>Ideas, assessed.</span>
-        </div>
+        <div className="workspace-label">AI Registry</div>
         <nav aria-label="Main navigation">
           {links.map(({ href, label, icon: Icon }) => (
             <a key={href} href={`#${href}`} aria-current={path === href ? 'page' : undefined}>
@@ -182,9 +180,14 @@ export function App() {
         <div className="sidebar-bottom">
           <div className="demo-indicator">
             <span />
-            Interactive demo
+            Demo
+            <InfoButton label="About demo data">
+              <p>
+                Fictional data. Changes stay in your browser. Roles simulate a workflow; they do not
+                provide security.
+              </p>
+            </InfoButton>
           </div>
-          <p className="caption muted">Fictional data. Changes stay in your browser.</p>
           <label htmlFor="role">
             Preview as
             <select id="role" value={role} onChange={(e) => setRole(e.target.value as Role)}>
@@ -246,7 +249,7 @@ export function App() {
           </span>
           <div>
             <span className="local-indicator" />
-            Browser-local playground <span className="topbar-role">· Demo {role}</span>
+            <span className="topbar-role">Demo {role}</span>
           </div>
         </header>
         <main id="main" tabIndex={-1}>
@@ -328,7 +331,7 @@ export function App() {
           )}
           {!editing && (
             <footer className="page-footer">
-              <span>OC AI · Built to make decisions understandable.</span>
+              <span>OC AI</span>
               <span>Synthetic data · Illustrative methodology v{data.policy.version}</span>
             </footer>
           )}

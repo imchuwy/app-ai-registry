@@ -62,11 +62,7 @@ export function Registry({
   }
   return (
     <>
-      <PageHeader
-        eyebrow="The registry"
-        title="Every use case, in view."
-        description="A shared vocabulary for what AI does—and how it is managed."
-      >
+      <PageHeader title="Registry">
         <a className="button primary" href="#/new">
           <Plus size={18} />
           Add use case

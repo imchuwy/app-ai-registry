@@ -6,7 +6,7 @@ Status: locally implemented; publication pending. Updated 17 November 2026.
 
 An interactive portfolio application showing how an AI inventory, assessment workflow, transparent risk model and review history fit together. Visitors start with ten fictional examples and change only their own browser data.
 
-The OC AI Trail Sunset palette, mascot and semantic CSS tokens supersede the earlier visual concept. The working application uses neutral surfaces, coral actions, readable data and modest motion. System, Light and Dark preferences resolve before rendering. Inter and Manrope are bundled locally. No externally hosted fonts are loaded.
+The app carries its adopted OC AI v1.2 tokens in src/tokens.css and its serving assets in public/. The working application uses neutral surfaces, coral actions, readable data and modest motion. System, Light and Dark preferences resolve before rendering. Inter and Manrope are bundled locally. No externally hosted fonts are loaded.
 
 Primary destinations: Overview, Registry and Methodology. The assessment has two stages, About and Assessment. Case entries separate Overview, Assessment and Activity. Demo roles and maintenance tools live in the navigation.
 
@@ -46,5 +46,7 @@ The form reserves the measured action-bar height plus 24px. Safe-area padding is
 - Fresh install, types, lint, tests and production build pass; publish only the audited static output.
 
 ## Change log
+
+- 20 November 2026: consolidated reusable UX in oc-ai-design, imported shared tokens, shortened page copy and added progressive disclosure; see [UX refresh](ux-refresh.md).
 
 - 17 November 2026: implemented the independent static application, generic domain rules and browser service; adopted the supplied OC AI design kit; added deterministic examples, responsive screens, theme control, tests and publication documentation.

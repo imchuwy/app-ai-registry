@@ -1,0 +1,517 @@
+{
+  "method": "WCAG sRGB relative luminance; opaque flat colours only. Does not cover opacity, imagery or whole-page accessibility.",
+  "checks": [
+    {
+      "name": "light: text on canvas",
+      "foreground": "#242628",
+      "background": "#f7f7f5",
+      "ratio": 14.157,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: text-muted on canvas",
+      "foreground": "#555b61",
+      "background": "#f7f7f5",
+      "ratio": 6.4078,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: link on canvas",
+      "foreground": "#a93d35",
+      "background": "#f7f7f5",
+      "ratio": 5.7481,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: success on canvas",
+      "foreground": "#24704d",
+      "background": "#f7f7f5",
+      "ratio": 5.5939,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: warning on canvas",
+      "foreground": "#8a5b00",
+      "background": "#f7f7f5",
+      "ratio": 5.4731,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: danger on canvas",
+      "foreground": "#a8283d",
+      "background": "#f7f7f5",
+      "ratio": 6.4488,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: info on canvas",
+      "foreground": "#245c8a",
+      "background": "#f7f7f5",
+      "ratio": 6.5854,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: control-border on canvas",
+      "foreground": "#777e85",
+      "background": "#f7f7f5",
+      "ratio": 3.8332,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "light: focus on canvas",
+      "foreground": "#242628",
+      "background": "#f7f7f5",
+      "ratio": 14.157,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "light: text on surface",
+      "foreground": "#242628",
+      "background": "#ffffff",
+      "ratio": 15.1855,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: text-muted on surface",
+      "foreground": "#555b61",
+      "background": "#ffffff",
+      "ratio": 6.8733,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: link on surface",
+      "foreground": "#a93d35",
+      "background": "#ffffff",
+      "ratio": 6.1658,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: success on surface",
+      "foreground": "#24704d",
+      "background": "#ffffff",
+      "ratio": 6.0003,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: warning on surface",
+      "foreground": "#8a5b00",
+      "background": "#ffffff",
+      "ratio": 5.8707,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: danger on surface",
+      "foreground": "#a8283d",
+      "background": "#ffffff",
+      "ratio": 6.9173,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: info on surface",
+      "foreground": "#245c8a",
+      "background": "#ffffff",
+      "ratio": 7.0639,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: control-border on surface",
+      "foreground": "#777e85",
+      "background": "#ffffff",
+      "ratio": 4.1117,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "light: focus on surface",
+      "foreground": "#242628",
+      "background": "#ffffff",
+      "ratio": 15.1855,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "light: text on surface-raised",
+      "foreground": "#242628",
+      "background": "#f0f1ef",
+      "ratio": 13.402,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: text-muted on surface-raised",
+      "foreground": "#555b61",
+      "background": "#f0f1ef",
+      "ratio": 6.066,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: link on surface-raised",
+      "foreground": "#a93d35",
+      "background": "#f0f1ef",
+      "ratio": 5.4416,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: success on surface-raised",
+      "foreground": "#24704d",
+      "background": "#f0f1ef",
+      "ratio": 5.2955,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: warning on surface-raised",
+      "foreground": "#8a5b00",
+      "background": "#f0f1ef",
+      "ratio": 5.1812,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: danger on surface-raised",
+      "foreground": "#a8283d",
+      "background": "#f0f1ef",
+      "ratio": 6.1049,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: info on surface-raised",
+      "foreground": "#245c8a",
+      "background": "#f0f1ef",
+      "ratio": 6.2342,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: control-border on surface-raised",
+      "foreground": "#777e85",
+      "background": "#f0f1ef",
+      "ratio": 3.6288,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "light: focus on surface-raised",
+      "foreground": "#242628",
+      "background": "#f0f1ef",
+      "ratio": 13.402,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "light: on-action on action",
+      "foreground": "#ffffff",
+      "background": "#b44439",
+      "ratio": 5.4879,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: on-action on action-hover",
+      "foreground": "#ffffff",
+      "background": "#a93d35",
+      "ratio": 6.1658,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: on-action on action-pressed",
+      "foreground": "#ffffff",
+      "background": "#91332d",
+      "ratio": 7.7337,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: on-selected on selected",
+      "foreground": "#242628",
+      "background": "#f0f1ef",
+      "ratio": 13.402,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "light: on-accent on accent",
+      "foreground": "#35243f",
+      "background": "#f5ba83",
+      "ratio": 8.2913,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: text on canvas",
+      "foreground": "#f1f2f3",
+      "background": "#121315",
+      "ratio": 16.5843,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: text-muted on canvas",
+      "foreground": "#a9afb7",
+      "background": "#121315",
+      "ratio": 8.4118,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: link on canvas",
+      "foreground": "#ffab9a",
+      "background": "#121315",
+      "ratio": 10.2185,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: success on canvas",
+      "foreground": "#90d4ab",
+      "background": "#121315",
+      "ratio": 10.7917,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: warning on canvas",
+      "foreground": "#f5cd77",
+      "background": "#121315",
+      "ratio": 12.2877,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: danger on canvas",
+      "foreground": "#ff99a8",
+      "background": "#121315",
+      "ratio": 9.1829,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: info on canvas",
+      "foreground": "#99c8f1",
+      "background": "#121315",
+      "ratio": 10.5217,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: control-border on canvas",
+      "foreground": "#78818b",
+      "background": "#121315",
+      "ratio": 4.7017,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "dark: focus on canvas",
+      "foreground": "#f5ba83",
+      "background": "#121315",
+      "ratio": 10.8293,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "dark: text on surface",
+      "foreground": "#f1f2f3",
+      "background": "#1b1d20",
+      "ratio": 15.0701,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: text-muted on surface",
+      "foreground": "#a9afb7",
+      "background": "#1b1d20",
+      "ratio": 7.6438,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: link on surface",
+      "foreground": "#ffab9a",
+      "background": "#1b1d20",
+      "ratio": 9.2855,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: success on surface",
+      "foreground": "#90d4ab",
+      "background": "#1b1d20",
+      "ratio": 9.8064,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: warning on surface",
+      "foreground": "#f5cd77",
+      "background": "#1b1d20",
+      "ratio": 11.1658,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: danger on surface",
+      "foreground": "#ff99a8",
+      "background": "#1b1d20",
+      "ratio": 8.3445,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: info on surface",
+      "foreground": "#99c8f1",
+      "background": "#1b1d20",
+      "ratio": 9.561,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: control-border on surface",
+      "foreground": "#78818b",
+      "background": "#1b1d20",
+      "ratio": 4.2725,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "dark: focus on surface",
+      "foreground": "#f5ba83",
+      "background": "#1b1d20",
+      "ratio": 9.8405,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "dark: text on surface-raised",
+      "foreground": "#f1f2f3",
+      "background": "#24272b",
+      "ratio": 13.3813,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: text-muted on surface-raised",
+      "foreground": "#a9afb7",
+      "background": "#24272b",
+      "ratio": 6.7872,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: link on surface-raised",
+      "foreground": "#ffab9a",
+      "background": "#24272b",
+      "ratio": 8.2449,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: success on surface-raised",
+      "foreground": "#90d4ab",
+      "background": "#24272b",
+      "ratio": 8.7074,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: warning on surface-raised",
+      "foreground": "#f5cd77",
+      "background": "#24272b",
+      "ratio": 9.9145,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: danger on surface-raised",
+      "foreground": "#ff99a8",
+      "background": "#24272b",
+      "ratio": 7.4094,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: info on surface-raised",
+      "foreground": "#99c8f1",
+      "background": "#24272b",
+      "ratio": 8.4896,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: control-border on surface-raised",
+      "foreground": "#78818b",
+      "background": "#24272b",
+      "ratio": 3.7937,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "dark: focus on surface-raised",
+      "foreground": "#f5ba83",
+      "background": "#24272b",
+      "ratio": 8.7378,
+      "target": 3,
+      "passes": true
+    },
+    {
+      "name": "dark: on-action on action",
+      "foreground": "#121315",
+      "background": "#ee9585",
+      "ratio": 8.2085,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: on-action on action-hover",
+      "foreground": "#121315",
+      "background": "#ffa28e",
+      "ratio": 9.5696,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: on-action on action-pressed",
+      "foreground": "#121315",
+      "background": "#e77d6b",
+      "ratio": 6.6775,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: on-selected on selected",
+      "foreground": "#f1f2f3",
+      "background": "#24272b",
+      "ratio": 13.3813,
+      "target": 4.5,
+      "passes": true
+    },
+    {
+      "name": "dark: on-accent on accent",
+      "foreground": "#35243f",
+      "background": "#f5ba83",
+      "ratio": 8.2913,
+      "target": 4.5,
+      "passes": true
+    }
+  ]
+}

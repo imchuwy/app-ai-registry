@@ -17,11 +17,7 @@ export function Methodology({
     [high, setHigh] = useState(policy.highMin);
   return (
     <>
-      <PageHeader
-        eyebrow={`Illustrative methodology / v${policy.version}`}
-        title="No black box here."
-        description="Four factors. A transparent score. Separate review considerations."
-      />
+      <PageHeader eyebrow={`Illustrative methodology / v${policy.version}`} title="Methodology" />
       <section className="panel methodology">
         <h2>How the demo calculates risk</h2>
         <p>
@@ -29,19 +25,22 @@ export function Methodology({
           demonstrate a governance workflow; they are not legal guidance, certification or a
           validated risk model.
         </p>
-        <div className="factor-cards">
-          {factors.map((f) => (
-            <div key={f}>
-              <h3>{f[0].toUpperCase() + f.slice(1)}</h3>
-              <p>{questions[f].help}</p>
-              <ol start={0}>
-                {questions[f].choices.map((c) => (
-                  <li key={c}>{c}</li>
-                ))}
-              </ol>
-            </div>
-          ))}
-        </div>
+        <details>
+          <summary>Scoring factors and answer definitions</summary>
+          <div className="factor-cards">
+            {factors.map((f) => (
+              <div key={f}>
+                <h3>{f[0].toUpperCase() + f.slice(1)}</h3>
+                <p>{questions[f].help}</p>
+                <ol start={0}>
+                  {questions[f].choices.map((c) => (
+                    <li key={c}>{c}</li>
+                  ))}
+                </ol>
+              </div>
+            ))}
+          </div>
+        </details>
         <div className="band-guide">
           <div>
             <span className="risk risk-low">Low</span>
@@ -58,26 +57,32 @@ export function Methodology({
             <strong>{policy.highMin}–12</strong>
           </div>
         </div>
-        <h2>Review is a separate decision</h2>
-        <p>
-          Sensitive information, consequential decisions about people and autonomous external
-          actions are independent review considerations. A low score does not remove a selected
-          review flag. A required flag also remains visible after a reviewer approves a case: the
-          flag describes the use; the workflow status records the decision.
-        </p>
-        <h2>What appears on the dashboard?</h2>
-        <p>
-          Active, submitted AI cases with all four answers are plotted. Drafts, archived records and
-          rules-only systems are excluded from charts and clearly accounted for in the table. The
-          risk map uses impact + reach horizontally and complexity + reliance vertically, on fixed
-          0–6 scales.
-        </p>
-        <h2>Saved evidence and current settings</h2>
-        <p>
-          Submission captures the answers, review flags, score and methodology version. Changing the
-          thresholds below recalculates current dashboard bands; it never rewrites saved evidence or
-          previous review decisions.
-        </p>
+        <details>
+          <summary>Review is a separate decision</summary>
+          <p>
+            Sensitive information, consequential decisions about people and autonomous external
+            actions are independent review considerations. A low score does not remove a selected
+            review flag. A required flag also remains visible after a reviewer approves a case: the
+            flag describes the use; the workflow status records the decision.
+          </p>
+        </details>
+        <details>
+          <summary>What appears on the dashboard?</summary>
+          <p>
+            Active, submitted AI cases with all four answers are plotted. Drafts, archived records
+            and rules-only systems are excluded from charts and clearly accounted for in the table.
+            The risk map uses impact + reach horizontally and complexity + reliance vertically, on
+            fixed 0–6 scales.
+          </p>
+        </details>
+        <details>
+          <summary>Saved evidence and current settings</summary>
+          <p>
+            Submission captures the answers, review flags, score and methodology version. Changing
+            the thresholds below recalculates current dashboard bands; it never rewrites saved
+            evidence or previous review decisions.
+          </p>
+        </details>
         <form
           onSubmit={(e) => {
             e.preventDefault();

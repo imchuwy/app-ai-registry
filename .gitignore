@@ -3,6 +3,5 @@ dist/
 coverage/
 .env*
 *.log
-oc-ai-design/
 test-results/
 .DS_Store

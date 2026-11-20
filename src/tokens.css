@@ -1,4 +1,4 @@
-/* OC AI Trail Sunset v1.0. Import before component styles. */
+/* OC AI Neutral application theme v1.2. Import before component styles. */
 :root {
   --brand-plum: #35243f;
   --brand-coral: #c94f43;
@@ -15,14 +15,14 @@
   --space-16: 64px;
   --space-24: 96px;
   --space-32: 128px;
-  --radius-control: 10px;
-  --radius-card: 16px;
-  --radius-feature: 24px;
+  --radius-control: 8px;
+  --radius-card: 12px;
+  --radius-feature: 16px;
   --radius-pill: 999px;
   --content-max: 1280px;
   --dashboard-max: 1600px;
   --duration-fast: 140ms;
-  --duration-panel: 240ms;
+  --duration-panel: 200ms;
   --duration-hero: 600ms;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -32,29 +32,29 @@
 [data-theme='light'] {
   color-scheme: light;
   --canvas: #f7f7f5;
-  --brand-canvas: #fffaf5;
+  --brand-canvas: #f0f1ef;
   --surface: #ffffff;
-  --surface-raised: #fffaf5;
-  --text: #35243f;
-  --text-muted: #6c626b;
-  --border: #ded7d3;
-  --control-border: #8b7f82;
-  --action: #bf493f;
+  --surface-raised: #f0f1ef;
+  --text: #242628;
+  --text-muted: #555b61;
+  --border: #e1e3e1;
+  --control-border: #777e85;
+  --action: #b44439;
   --action-hover: #a93d35;
   --action-pressed: #91332d;
   --on-action: #ffffff;
   --link: #a93d35;
-  --selected: #fceae4;
-  --on-selected: #8d332e;
+  --selected: #f0f1ef;
+  --on-selected: #242628;
   --accent: #f5ba83;
   --on-accent: #35243f;
-  --focus: #35243f;
+  --focus: #242628;
   --success: #24704d;
   --warning: #8a5b00;
   --danger: #a8283d;
   --info: #245c8a;
   --chart-1: #a93d35;
-  --chart-2: #35243f;
+  --chart-2: #242628;
   --chart-3: #28736b;
   --chart-4: #876010;
   --chart-5: #69538a;
@@ -64,21 +64,21 @@
 
 [data-theme='dark'] {
   color-scheme: dark;
-  --canvas: #282529;
-  --brand-canvas: #282529;
-  --surface: #312d32;
-  --surface-raised: #3c363d;
-  --text: #fffaf5;
-  --text-muted: #c6bbc3;
-  --border: #514950;
-  --control-border: #8c7f88;
-  --action: #f28b79;
+  --canvas: #121315;
+  --brand-canvas: #121315;
+  --surface: #1b1d20;
+  --surface-raised: #24272b;
+  --text: #f1f2f3;
+  --text-muted: #a9afb7;
+  --border: #34383d;
+  --control-border: #78818b;
+  --action: #ee9585;
   --action-hover: #ffa28e;
   --action-pressed: #e77d6b;
-  --on-action: #282529;
+  --on-action: #121315;
   --link: #ffab9a;
-  --selected: #4a3433;
-  --on-selected: #ffd2c6;
+  --selected: #24272b;
+  --on-selected: #f1f2f3;
   --accent: #f5ba83;
   --on-accent: #35243f;
   --focus: #f5ba83;
@@ -86,7 +86,7 @@
   --warning: #f5cd77;
   --danger: #ff99a8;
   --info: #99c8f1;
-  --chart-1: #f28b79;
+  --chart-1: #ee9585;
   --chart-2: #f5ba83;
   --chart-3: #8ed2c4;
   --chart-4: #e6cb81;
