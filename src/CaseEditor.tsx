@@ -126,11 +126,7 @@ export function CaseEditor({
     );
   return (
     <div className="form-page" style={{ paddingBottom: footerHeight + 24 }}>
-      <PageHeader
-        eyebrow={record ? 'Edit use case' : 'Create a use case'}
-        title="Make the reasoning visible."
-        description="Describe the idea. Understand its impact. Keep the decisions together."
-      />
+      <PageHeader title={record ? 'Edit use case' : 'New use case'} />
       <div className="steps" aria-label="Assessment stages">
         <button aria-current={step === 1 ? 'step' : undefined} onClick={() => setStep(1)}>
           1 <span>About</span>
@@ -169,23 +165,39 @@ export function CaseEditor({
               maxLength={160}
               aria-required="true"
               aria-invalid={errors.length > 0 && !values.title.trim()}
+              aria-describedby={
+                errors.length > 0 && !values.title.trim() ? 'title-error' : undefined
+              }
               value={values.title}
               onChange={(e) => change('title', e.target.value)}
               placeholder="e.g. Customer support reply assistant"
             />
           </label>
+          {errors.length > 0 && !values.title.trim() && (
+            <p className="field-error" id="title-error">
+              Enter a use case name.
+            </p>
+          )}
           <label>
             Purpose and expected outcome <span className="required">Required to submit</span>
             <textarea
               maxLength={3000}
               aria-required="true"
               aria-invalid={errors.length > 0 && !values.description.trim()}
+              aria-describedby={
+                errors.length > 0 && !values.description.trim() ? 'description-error' : undefined
+              }
               rows={4}
               value={values.description}
               onChange={(e) => change('description', e.target.value)}
               placeholder="What does it do, who uses it and what should improve?"
             />
           </label>
+          {errors.length > 0 && !values.description.trim() && (
+            <p className="field-error" id="description-error">
+              Describe the purpose and expected outcome.
+            </p>
+          )}
           <div className="form-grid">
             <label>
               Department
@@ -420,9 +432,7 @@ export function CaseEditor({
           </p>
         </div>
         <div className="inline">
-          <a href={id ? `#/case/${id}` : '#/registry'}>
-            Cancel
-          </a>
+          <a href={id ? `#/case/${id}` : '#/registry'}>Cancel</a>
           <button onClick={() => save(false)}>
             <Check size={16} />
             Save draft

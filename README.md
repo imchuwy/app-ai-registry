@@ -2,7 +2,7 @@
 
 A working, browser-local AI governance playground. Explore ten fictional use cases, understand their risk, try an assessment and follow a review decision.
 
-Built with React, TypeScript and the OC AI Trail Sunset design system. All example records, dates, comments and activity are synthetic. There is no shared database, login, model API or telemetry.
+Built with React, TypeScript and the OC AI design template v1.2. All example records, dates, comments and activity are synthetic. There is no shared database, login, model API or telemetry.
 
 ## Run locally
 
@@ -67,7 +67,7 @@ Once loaded, interactions can continue offline. A fresh offline load is not supp
 
 The public demo is published at [imchuwy.github.io/app-ai-registry](https://imchuwy.github.io/app-ai-registry/). GitHub Pages uses the GitHub Actions publishing source. The workflow checks every branch and pull request; only a successful run on `main` uploads `dist/` and deploys it. Future merges to `main` automatically update the demo. The workflow can also be run manually on `main` to redeploy.
 
-Build with `npm run build` and upload **only `dist/`** to a static host. Relative assets and hash routes support a repository subpath without server rewrites. The supplied design reference folder is excluded from Git and never part of the deployment output.
+Build with `npm run build` and upload **only `dist/`** to a static host. Relative assets and hash routes support a repository subpath without server rewrites. The app includes its own theme and brand assets.
 
 Deployment uses GitHub's short-lived workflow token. No stored deployment credentials, backend environment variables or production database are needed.
 
@@ -76,3 +76,5 @@ Deployment uses GitHub's short-lived workflow token. No stored deployment creden
 OC AI's supplied mascot and theme tokens establish the visual identity. Production images are optimised raster copies, not claimed vector masters. The small favicon is a separate, simple OC monogram. Inter and Manrope are bundled locally under their respective SIL Open Font Licenses; copies are retained in `public/licenses/`.
 
 Project source licensing is pending an owner decision. No open-source licence is granted by this README. See [third-party notices](THIRD_PARTY_NOTICES.md) for retained dependency attribution.
+
+The app palette lives in [src/tokens.css](src/tokens.css). Run `npm run check:design` to check its contrast pairs.

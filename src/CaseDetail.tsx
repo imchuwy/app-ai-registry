@@ -36,7 +36,6 @@ export function CaseDetail({
       <PageHeader
         eyebrow={`${c.department} / ${c.archived ? 'Archived' : c.stage}`}
         title={c.title}
-        description={c.description}
       >
         {role !== 'Reviewer' && !c.archived && (
           <a className="button primary" href={`#/edit/${c.id}`}>

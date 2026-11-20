@@ -23,7 +23,7 @@ The form's action bar was visually checked at the viewport bottom. Native reset 
 
 The production build was served under `/portfolio/` on a separate local static server. Assets loaded correctly and refreshing a case deep link retained the case. The distribution popup listed its four Medium cases. Responsive chart resizing was checked at 320, 390, 768 and 1024px; after layout settled, the 320px dashboard had no horizontal overflow. Screenshots are saved in `docs/screenshots/`.
 
-The publishable source and built text were scanned for excluded organisation identifiers, internal hosting IDs and local workstation paths. The supplied local design kit is preserved but ignored by Git and excluded from the static build. Font and dependency notices are retained.
+The publishable source and built text were scanned for excluded organisation identifiers, internal hosting IDs and local workstation paths. The app owns its design tokens, serving assets and contrast checks. Font and dependency notices are retained.
 
 ## Not yet measured
 
@@ -32,3 +32,13 @@ The publishable source and built text were scanned for excluded organisation ide
 - Public hosting or a personal GitHub workflow run; neither has been authorised/configured yet.
 
 Accessibility is a design target, not a certification. Local checks do not establish production availability or a public release.
+
+## UX refresh — 20 November 2026
+
+- Shared palette: 64/64 opaque text/control contrast checks passed.
+- TypeScript, ESLint, all 29 domain/service tests and production build passed.
+- Browser review of the built app: light/dark Overview, expanded methodology factors, and dark Registry at 320px. Registry document width matched its viewport (305 CSS px excluding scrollbar); /12 remained visible.
+- The development server could not refresh a locked node_modules/.vite cache (EPERM). The built app was reviewed on local port 4174 instead; no cache was deleted.
+- The portable preview asset references and JavaScript were checked. Direct file:// browser inspection was blocked by browser policy, so direct-file visual verification remains manual.
+- Original docs/screenshots are v1.0 historical evidence, not screenshots of this refresh.
+- Standalone dark-icon generation was not accepted due to transparency artefacts. Original assets are preserved; the mobile icon uses a light backing in dark mode.

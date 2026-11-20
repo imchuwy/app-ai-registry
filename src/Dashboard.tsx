@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ArrowRight, Plus, Activity, Layers3, ClipboardCheck } from 'lucide-react';
+import { Plus, Activity, Layers3, ClipboardCheck } from 'lucide-react';
 import { currentResult, plotGroups, type Policy, type UseCase } from './domain';
 import { CasePreview, InfoButton, PageHeader, Risk, Flag } from './ui';
 export function Dashboard({ cases, policy }: { cases: UseCase[]; policy: Policy }) {
@@ -9,6 +9,7 @@ export function Dashboard({ cases, policy }: { cases: UseCase[]; policy: Policy 
   const ref = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(400);
   const [selected, setSelected] = useState<{
+    key: string;
     cases: UseCase[];
     anchor: HTMLElement;
     title: string;
@@ -34,35 +35,12 @@ export function Dashboard({ cases, policy }: { cases: UseCase[]; policy: Policy 
   const max = Math.max(1, ...counts.map((c) => c.length));
   return (
     <>
-      <PageHeader
-        eyebrow="Your AI landscape"
-        title="Clarity before complexity."
-        description="Understand the use cases. See the risk. Decide what happens next."
-      >
+      <PageHeader title="Overview">
         <a className="button primary" href="#/new">
           <Plus size={18} />
           Add use case
         </a>
       </PageHeader>
-      <section className="demo-intro">
-        <div>
-          <span className="small-label">A working playground</span>
-          <h2>Ten ideas. Every decision visible.</h2>
-          <p>
-            Explore fictional cases, follow an assessment or try a review. Your changes stay in this
-            browser.
-          </p>
-          <div className="inline">
-            <a href="#/registry">
-              Explore the registry <ArrowRight size={16} />
-            </a>
-            <a href="#/edit/demo-03">
-              Continue the example draft <ArrowRight size={16} />
-            </a>
-          </div>
-        </div>
-        <img src={`${import.meta.env.BASE_URL}brand/mascot.webp`} width="132" height="132" alt="" />
-      </section>
       <div className="stat-grid">
         <div>
           <Layers3 />
@@ -72,7 +50,7 @@ export function Dashboard({ cases, policy }: { cases: UseCase[]; policy: Policy 
         </div>
         <div>
           <Activity />
-          <span>Assessed & plotted</span>
+          <span>Assessed</span>
           <strong>{plotted.length}</strong>
           <small>{active.length - plotted.length} draft or rules-only</small>
         </div>
@@ -87,7 +65,6 @@ export function Dashboard({ cases, policy }: { cases: UseCase[]; policy: Policy 
         <section className="panel chart-panel">
           <div className="panel-heading">
             <div>
-              <span className="small-label">Exposure & impact</span>
               <h2>Risk map</h2>
             </div>
             <InfoButton label="Reading the risk map">
@@ -144,11 +121,14 @@ export function Dashboard({ cases, policy }: { cases: UseCase[]; policy: Policy 
               return (
                 <button
                   key={`${g.x}-${g.y}`}
+                  aria-haspopup="dialog"
+                  aria-expanded={selected?.key === `${g.x}-${g.y}`}
                   className={`chart-dot dot-${band}`}
                   style={{ left: left + (g.x / 6) * w - 22, top: top + h - (g.y / 6) * h - 22 }}
                   aria-label={`${g.cases.length} cases: impact and reach ${g.x}, complexity and reliance ${g.y}`}
                   onClick={(e) =>
                     setSelected({
+                      key: `${g.x}-${g.y}`,
                       cases: g.cases,
                       anchor: e.currentTarget,
                       title: 'Risk map selection',
@@ -173,7 +153,6 @@ export function Dashboard({ cases, policy }: { cases: UseCase[]; policy: Policy 
         <section className="panel chart-panel">
           <div className="panel-heading">
             <div>
-              <span className="small-label">Current methodology</span>
               <h2>Risk distribution</h2>
             </div>
             <InfoButton label="Understanding risk bands">
@@ -192,11 +171,18 @@ export function Dashboard({ cases, policy }: { cases: UseCase[]; policy: Policy 
                 <div className="bar-column" key={b}>
                   <span className="bar-value">{counts[i].length}</span>
                   <button
+                    aria-haspopup="dialog"
+                    aria-expanded={selected?.key === b}
                     aria-label={`${b} risk: ${counts[i].length} cases`}
                     className={`bar bar-${b.toLowerCase()}`}
                     style={{ height: `${Math.max(3, (counts[i].length / max) * 220)}px` }}
                     onClick={(e) =>
-                      setSelected({ cases: counts[i], anchor: e.currentTarget, title: `${b} risk` })
+                      setSelected({
+                        key: b,
+                        cases: counts[i],
+                        anchor: e.currentTarget,
+                        title: `${b} risk`,
+                      })
                     }
                   />
                   <strong>{b}</strong>
@@ -217,7 +203,6 @@ export function Dashboard({ cases, policy }: { cases: UseCase[]; policy: Policy 
       <section className="panel comparison">
         <div className="panel-heading">
           <div>
-            <span className="small-label">The detail behind the dots</span>
             <h2>Compare use cases</h2>
           </div>
           <span className="muted">Methodology v{policy.version}</span>

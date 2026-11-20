@@ -34,7 +34,7 @@ export function PageHeader({
   description,
   children,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   children?: ReactNode;
@@ -42,7 +42,7 @@ export function PageHeader({
   return (
     <header className="page-header">
       <div>
-        <div className="eyebrow">{eyebrow}</div>
+        {eyebrow && <div className="eyebrow">{eyebrow}</div>}
         <h1>{title}</h1>
         {description && <p>{description}</p>}
       </div>
@@ -202,7 +202,12 @@ export function Confirm({
     return () => el.close();
   }, []);
   return (
-    <dialog ref={ref} className="confirm-dialog" onCancel={onClose} aria-labelledby="confirmation-title">
+    <dialog
+      ref={ref}
+      className="confirm-dialog"
+      onCancel={onClose}
+      aria-labelledby="confirmation-title"
+    >
       <h2 id="confirmation-title">{title}</h2>
       <p>{description}</p>
       <div className="inline end">

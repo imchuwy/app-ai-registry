@@ -14,7 +14,7 @@ The implementation branch is `codex/portfolio-implementation`, based on the exis
 
 - Review the application using only fictional examples.
 - Run `npm ci`, `npm run check`, and `npm audit`.
-- Inspect the selected Git contents and built output. Keep the local design-reference directory excluded; it contains internal workstation information.
+- Inspect the selected Git contents and built output. Publish only the built dist/ directory.
 - Preserve the personal repository's existing history and merge the implementation through a checked pull request.
 - Publish `dist/` after the hosting destination is agreed and deployment is authorised.
 - Verify the actual published subpath, deep links, refresh, fonts and favicon on desktop and a real phone.
